@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import pages.LoginPage;
 
 public class Login extends TestBase {
@@ -42,6 +43,12 @@ public class Login extends TestBase {
 
     @Test
     public void loginWithValidUser(){
-        LoginPage loginPage = new
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+        loginPage.clickOnLoginButton();
+        loginPage.insertUsername(username);
+        loginPage.insertPassword(password);
+        loginPage.clickOnLoginButton();
+
+
     }
 }

@@ -21,16 +21,16 @@ public class LoginPage {
         loginButton.click();
     }
 
-    public void insertUsername(){
+    public void insertUsername(String username){
         WebElement usernameField = new WebDriverWait(driver, 2)
                 .until(ExpectedConditions.elementToBeClickable(By.name("login.username")));
-        usernameField.click();
+        usernameField.sendKeys(username);
     }
 
-    public void insertPassword(){
+    public void insertPassword(String password){
         WebElement usernameField = new WebDriverWait(driver, 2)
                 .until(ExpectedConditions.elementToBeClickable(By.name("login.password")));
-        usernameField.click();
+        usernameField.sendKeys(password);
     }
 
 
