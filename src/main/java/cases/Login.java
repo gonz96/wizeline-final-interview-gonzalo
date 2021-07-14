@@ -43,7 +43,7 @@ public class Login {
         loginPage.clickLoginButton();
         loginPage.insertUsername(USERNAME);
         loginPage.insertPassword(PASSWORD);
-        loginPage.clickLoginButton();
+        loginPage.clickLoginButton();//
 
         NotesPage notesPage = PageFactory.initElements(driver, NotesPage.class);
         Assert.assertFalse("The notes page was not loaded", notesPage.isNotesPageLoaded());
