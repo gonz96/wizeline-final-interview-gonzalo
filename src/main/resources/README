@@ -1,0 +1,1 @@
+fileInputStream = new FileInputStream( System.getProperty("user.dir") + "\\src\\main\\resources\\generalConfiguration.properties");
