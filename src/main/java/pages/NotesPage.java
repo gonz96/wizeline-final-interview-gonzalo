@@ -1,5 +1,6 @@
 package pages;
 
+import org.omg.CORBA.SetOverrideType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,11 +17,11 @@ public class NotesPage {
         this.driver = driver;
     }
 
-    public boolean isPageLoaded(){
+    public boolean isPageLoaded() {
         return driver.findElement(By.id("my-notes-page")).isDisplayed();
+        System.out.println("this is a test");
+        
     }
-
-
 
 
 

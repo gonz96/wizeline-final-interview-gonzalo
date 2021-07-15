@@ -9,9 +9,10 @@ import java.util.Properties;
 public class TestBase {
     protected Properties properties;
     public TestBase() {
+        properties = new Properties();
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream( System.getProperty("user.dir") + "\\src\\main\\resources\\generalConfiguration.properties");
+            fileInputStream = new FileInputStream( System.getProperty("user.dir") + "\\src\\main\\resources\\configuration.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
